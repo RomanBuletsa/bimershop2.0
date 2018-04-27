@@ -4,6 +4,7 @@ before_action :set_post, only: [:edit, :update, :destroy, :show]
 
 def show
 	@images = Image.where(post_id: @post.id)
+	@comments = Postcomment.where(post_id: @post.id)
 end
 
 def index

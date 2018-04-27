@@ -2,7 +2,27 @@
  <h1><%= @post.name %></h1>
  <div>
  <h4><%= @post.text %></h4>
- <% @images.each do |image| %>
-<p><%= image_tag(image.image, :class => "showphotos") %></p>
+
+<% @images.each do |image| %>
+ <p><%= image_tag(image.image) %></p>
+ <hr>
+<% end %>
+
+<% @comments.each do |comment| %>
+<p><%= comment.text %></p>
+<p>Create at: <%= comment.created_at%>
+</p>
 <hr>
 <% end %>
+
+
+<%= form_for :postcomment, url: post_postcomments_path(post_id: @post.id) do |f| %>
+<% if flash[:notice] %>
+<div><%= flash[:notice] %></div>
+<% end %>
+
+<p><%= f.label "Write comment" %></p>
+<div ><%= f.text_area :text, cols: 20, rows: 5, :class => "textarea" %></div><br />
+
+<p><%= f.submit "Send"%></p>
+ <% end %> 

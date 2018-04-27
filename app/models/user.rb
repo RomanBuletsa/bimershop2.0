@@ -4,5 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-    has_one :userparam     
+    has_one :userparam 
+    has_many :postcomments     
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'postcomments/new'
+
   get 'images/new'
 
   get 'posts/index'
@@ -10,13 +12,15 @@ Rails.application.routes.draw do
   get 'pages/index'
 
   devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :userparams
+resources :userparams
 
   resources :posts do
+  	resources :postcomments
   	resources :images
   end
 
-  root to: 'pages#index'
+root to: 'pages#index'
+  
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
