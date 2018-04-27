@@ -1,0 +1,33 @@
+  <div>
+   <%= f.text_field :firstname, placeholder: "First name", autofocus: true %>    
+  </div>
+  
+  <div>
+   <%= f.text_field :lastname, placeholder: "Last name" %>    
+  </div>
+  
+  <div>
+   <%= f.text_field :country, placeholder: "Country" %>    
+  </div>
+  
+  <div>
+   <%= f.text_field :city, placeholder: "City" %>    
+  </div>
+  
+  <div>
+    <%= f.file_field :avatar %>
+  </div>
+
+  <div>
+    <%= date_select("userparam", "dofb", start_year: 1950, end_year: 2000, order: [:month, :day, :year]) %>
+  </div>
+  
+  <div>
+   <%= f.text_field :phone, placeholder: "Phone number" %>    
+  </div>
+  
+  <div>
+    <%= f.submit "Save"%>
+  </div>
+ 
+ 

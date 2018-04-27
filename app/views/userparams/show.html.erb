@@ -1,0 +1,10 @@
+<h1><%= @user.firstname %> Profile</h1>
+ <%= image_tag(@user.avatar_url, height: '32', width: '32') %><br />
+Firstname: <%= @user.firstname %><br />
+Lastname: <%= @user.lastname %><br />
+Country: <%= @user.country %><br />
+City: <%= @user.city %><br />
+Date of Birth: <%= @user.dofb.strftime("%b,%d,%Y") %><br />
+Phone: <%= @user.phone %><br />
+
+<%= link_to "Edit Profile", edit_userparam_path %>

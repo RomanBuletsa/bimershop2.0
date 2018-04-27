@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 #ActiveAdmin
 gem 'activeadmin'
+#For avatar
+gem 'carrierwave'
 
 
 group :development, :test do
