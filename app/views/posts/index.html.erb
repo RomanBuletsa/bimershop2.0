@@ -1,0 +1,9 @@
+ <div>
+ <% @posts.each do |post| %>
+ <div >
+<p><%= image_tag(post.photo_url)%></p>
+<p><b><%= post.category.name %></b></p>
+ <p><center><%= link_to post.name, post_path(post.id)%></center></p>
+ </div>
+ <% end %>
+</div>	

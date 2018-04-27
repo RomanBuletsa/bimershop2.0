@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'posts/index'
+
   get 'userparams/show'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -9,6 +11,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :userparams
+
+  resources :posts
 
   root to: 'pages#index'
 end
