@@ -1,0 +1,7 @@
+<% if current_user.nil? %>
+<%= link_to user_session_path do %> Вхід
+<%end%>
+<%else%>
+<%= link_to destroy_user_session_path, method: :delete do %> Вийти
+<%end%>
+<%end%>
