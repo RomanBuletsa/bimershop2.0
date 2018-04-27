@@ -1,3 +1,8 @@
+<%= image_tag(@post.photo) %>
  <h1><%= @post.name %></h1>
  <div>
  <h4><%= @post.text %></h4>
+ <% @images.each do |image| %>
+<p><%= image_tag(image.image, :class => "showphotos") %></p>
+<hr>
+<% end %>
