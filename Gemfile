@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 
 #Devise
 gem 'devise'
+#ActiveAdmin
+gem 'activeadmin'
 
 
 group :development, :test do
