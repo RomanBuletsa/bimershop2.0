@@ -40,6 +40,8 @@ gem 'devise'
 gem 'activeadmin'
 #For avatar
 gem 'carrierwave'
+#For validation
+gem 'client_side_validations'
 
 
 group :development, :test do
