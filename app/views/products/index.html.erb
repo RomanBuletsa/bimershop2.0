@@ -1,0 +1,13 @@
+      <% @products.each do |product| %>
+              <% if product.icons == [] %>
+                	
+              <% else %>
+                  <%= image_tag(product.icons.first.url, height: '200', width: '200') %>
+              <% end %>
+            
+                  <a href="product.html"><%= product.name %></a>
+                
+                <div class="product_price"><%= product.price %>$</div>
+              
+            
+      <% end %>

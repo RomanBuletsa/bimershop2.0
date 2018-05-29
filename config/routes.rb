@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'products/index'
+
   get 'postcomments/new'
 
   get 'images/new'
@@ -21,6 +23,8 @@ resources :userparams
   end
 
 root to: 'pages#index'
+
+  resources :products
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

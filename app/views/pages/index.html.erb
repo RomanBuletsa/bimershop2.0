@@ -1,16 +1,30 @@
- <% if current_user.nil? %>
- <%= link_to user_session_path do %> Вхід
- <%end%>
+<% if current_user.nil? %>
+<li>
+<%= link_to user_session_path do %>
+<i class="zmdi zmdi-sign-in"></i> Login
+<% end %>
+</li>
 <% else %>
-<%if (@userparam=Userparam.find_by_user_id(current_user.id)).nil?%>
-<%= link_to new_userparam_path() do%> Профіль
-<%end%>
- <%else%>
-<%= link_to userparams_path(@userparam.id) do%> Профіль
-<%end%>
-<%= link_to posts_index_path(@userparam.id) do%> Машини
- <%end%>
- <%end%>
-<%= link_to destroy_user_session_path, method: :delete do %> Вийти
-<%end%>
-<%end%> 
+<li>
+<%= link_to new_product_path do %>
+<i class="zmdi zmdi-plus"></i> <%= t('add_product') %>
+<% end %>
+</li>
+<li>
+<%= link_to userparams_path, data: {turbolinks: false}  do %>
+<i class="zmdi zmdi-user"></i> <%= t('profile') %>
+<% end %>
+</li>
+<li>
+<%= link_to destroy_user_session_path, method: :delete do %>
+<i class="zmdi zmdi-log-in"></i> <%= t('logout') %>
+<% end %>
+</li>
+<% end %>
+
+<center><div><a href="/posts/index">Каталог</a></div></center>
+<center><div><a href="/products/index">Каталог бу</a></div></center>
+
+
+
+
