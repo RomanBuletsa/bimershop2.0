@@ -71,6 +71,10 @@ table {
 border-collapse: collapse;
 border-spacing: 0;
 }
+html, body{
+	 height: 100%;
+}
+
 .navbar-header{
 	width: auto !important;
 }
@@ -95,10 +99,6 @@ border-spacing: 0;
 	position: relative;
 	min-height: 1800px;
 	z-index: 2;
-}
-html {
-  position: relative;
-  min-height: 100%;
 }
 .footer-top-layout {
 	background: #1c1c1c none repeat scroll 0 0;
