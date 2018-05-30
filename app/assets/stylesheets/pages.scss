@@ -7,7 +7,7 @@
   src url('/assets/Aver_Bold_Italic')
 }
 
-body {background: #1D1B26 !important;}
+body {background: #1D1B26}
 .button-container a {
   text-decoration: none;
   outline: none;
@@ -25,6 +25,7 @@ body {background: #1D1B26 !important;}
   letter-spacing: 2px;
   transition: .8s cubic-bezier(.165,.84,.44,1);
 }
+
 .button-container a:before {
   content: "";
   position: absolute;

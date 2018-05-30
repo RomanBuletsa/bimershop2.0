@@ -1,19 +1,19 @@
   <div>
-   <%= f.text_field :firstname, placeholder: "First name", autofocus: true %>    
+   <%= f.text_field :firstname, placeholder: "First name", autofocus: true %>
   </div>
-  
+
   <div>
-   <%= f.text_field :lastname, placeholder: "Last name" %>    
+   <%= f.text_field :lastname, placeholder: "Last name" %>
   </div>
-  
+
   <div>
-   <%= f.text_field :country, placeholder: "Country" %>    
+   <%= f.text_field :country, placeholder: "Country" %>
   </div>
-  
+
   <div>
-   <%= f.text_field :city, placeholder: "City" %>    
+   <%= f.text_field :city, placeholder: "City" %>
   </div>
-  
+
   <div>
     <%= f.file_field :avatar %>
   </div>
@@ -21,13 +21,61 @@
   <div>
     <%= date_select("userparam", "dofb", start_year: 1950, end_year: 2000, order: [:month, :day, :year]) %>
   </div>
-  
+
   <div>
-   <%= f.text_field :phone, placeholder: "Phone number" %>    
+   <%= f.text_field :phone, placeholder: "Phone number" %>
   </div>
-  
+
   <div>
     <%= f.submit "Save"%>
   </div>
- 
- 
+
+  <div class="contact">
+    <form action="#">
+        <fieldset>
+            <div class="row">
+                <section class="col col-2">
+                    <label class="input">
+                        <i class="fa fa-append fa-user"></i>
+                        <%= f.text_field :firstname, placeholder: "Ім'я", autofocus: true %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <i class="fa fa-append fa-envelope-o"></i>
+                        <%= f.text_field :lastname, placeholder: "Прізвище" %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <i class="fa fa-append fa-envelope-o"></i>
+                        <%= f.text_field :country, placeholder: "Країна" %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <i class="fa fa-append fa-envelope-o"></i>
+                        <%= f.text_field :city, placeholder: "Місто" %>
+                    </label>
+                </section>
+            </div>
+            <section>
+              <div class="image-upload">
+                 <label for="file-input">
+                   <div class="addphoto">
+                      Аватар
+                   </div>
+                 </label>
+                 <%= f.file_field :avatar, id:"file-input" %>
+              </div>
+            </section>
+            <section>
+                <label class="textarea">
+                    <i class="fa fa-append fa-comment"></i>
+                    <textarea rows="4" placeholder="Сообщение" required></textarea>
+                </label>
+            </section>
+            <button type="submit" class="button">Отправить</button>
+        </fieldset>
+    </form>
+</div>
