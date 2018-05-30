@@ -1,10 +1,35 @@
-<h1><%= @user.firstname %> Profile</h1>
- <%= image_tag(@user.avatar_url, height: '32', width: '32') %><br />
-Firstname: <%= @user.firstname %><br />
-Lastname: <%= @user.lastname %><br />
-Country: <%= @user.country %><br />
-City: <%= @user.city %><br />
-Date of Birth: <%= @user.dofb.strftime("%b,%d,%Y") %><br />
-Phone: <%= @user.phone %><br />
+<div class="contact">
+  <div class="shapka">
+      <%= image_tag 'https://i2.wp.com/2mprogress.com/wp-content/uploads/2017/11/person-1824144_1280.png', alt: 'Icon', size: "120x120", class: "iconka" %>
+  </div>
+  <form action="#">
+      <fieldset>
+          <section>
+            <center><p style="font-size: 48px; padding-bottom: 15px;">Профіль</p></center>
+            <center><%= image_tag(@user.avatar_url, class: 'avatarka')  %></center>
+          <div class="row">
+              <section class="col col-2">
+                 <p>Ім'я: <%= @user.firstname %></p>
+              </section>
+              <section class="col col-2">
+                      <p>Прізвище: <%= @user.lastname %></p>
+              </section>
+              <section class="col col-2">
+                  <p>Країна: <%= @user.country %></p>
+              </section>
+              <section class="col col-2">
+                  <p>Місто: <%= @user.city %></p>
+              </section>
+              <section class="col col-2">
+                  <p>Дата народження: <%= @user.dofb.strftime("%b,%d,%Y") %></p>
+              </section>
+              <section class="col col-2">
+                  <p>Телефон: <%= @user.phone %></p>
+              </section>
 
-<%= link_to "Edit Profile", edit_userparam_path %>
+          </div>
+
+          <%= link_to "Редагувати", edit_userparam_path, class: 'form2but' %>
+      </fieldset>
+  </form>
+</div>
