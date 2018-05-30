@@ -1,0 +1,46 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<%= link_to "Bimer Shop", root_path, class: "navbar-brand"%>
+			<% if current_user.nil? %>
+			<%= link_to "Нові авто",  posts_index_path, class: "navbar-brand"%>
+      <%= link_to "Б/у авто", products_index_path, class: "navbar-brand"%>
+			<%else%>
+
+			<%= link_to "Нові авто",  posts_index_path, class: "navbar-brand"%>
+      <%= link_to "Б/у авто", products_index_path, class: "navbar-brand"%>
+
+			<%end%>
+
+
+		</div>
+
+		<ul class="nav navbar-nav navbar-right">
+		<% if current_user.nil? %>
+
+			<li>
+				<%= link_to user_session_path, :class => "authin" do %></p>
+					<i class="glyphicon glyphicon-user"></i><span class="authin"> Вхід </span>
+				<% end %>
+			</li>
+			<% else %>
+      <li>
+        <%= link_to new_product_path, class: "navbar-brand" do %>
+        <i class="zmdi zmdi-plus"></i> Додати власне авто
+        <% end %>
+      </li>
+      <li>
+        <%= link_to userparams_path, class: "navbar-brand" do%>
+          Профіль
+        <%end%>
+
+      </li>
+			<li>
+				<%= link_to destroy_user_session_path, :class => "authin", method: :delete  do %>
+					<i class="glyphicon glyphicon-log-in"></i><span class="authin"> Вихід </span>
+				<% end %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+</nav>

@@ -1,31 +1,46 @@
-<div>
-<%= f.label :name %><br />
-<%= f.text_field :name, autofocus: true %>
-</div>
-
-<div>
-<%= f.label :description %><br />
-
-<%= f.text_area :description, :rows => 10, :cols => 60 %>
-</div>
-
-<div>
-<%= f.file_field :icons, multiple: true %>
-</div>
-
-<div>
-<%= f.label :price %><br />
-<%= f.text_field :price %>
-</div>
-
-
-<div>
-<%= f.label :count %><br />
-<%= f.text_field :count %>
-</div>
-
-
-
-<div>
-<%= f.submit "Save"%>
+<div class="contact">
+    <form action="#">
+        <fieldset>
+            <div class="row">
+                <section class="col col-2">
+                    <label class="input">
+                        <p> Марка та модель авто</p>
+                        <i class="fa fa-append fa-user"></i>
+                        <%= f.text_field :name %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <p>Рік випуску</p>
+                        <i class="fa fa-append fa-user"></i>
+                        <%= f.text_field :count %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <p> Ціна</p>
+                        <i class="fa fa-append fa-envelope-o"></i>
+                        <%= f.text_field :price %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                  <div class="image-upload">
+                     <label for="file-input">
+                       <div class="addphoto">
+                          Додати фото
+                       </div>
+                     </label>
+                     <%= f.file_field :icons, multiple: true, id:"file-input" %>
+                  </div>
+                </section>
+            </div>
+            <section>
+                <label class="textarea">
+                    <p>Опис автомобіля</p>
+                    <%= f.text_area :description, :rows => 4 %>
+                </label>
+            </section>
+            <button type="submit" class="button">Додати</button>
+        </fieldset>
+    </form>
 </div>

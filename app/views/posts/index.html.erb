@@ -1,9 +1,21 @@
- <div>
- <% @posts.each do |post| %>
- <div >
-<p><%= image_tag(post.photo_url)%></p>
-<p><b><%= post.category.name %></b></p>
- <p><center><%= link_to post.name, post_path(post.id)%></center></p>
- </div>
- <% end %>
-</div>	
+<%= stylesheet_link_tag 'animate' %>
+
+
+<div class="wow bounceInDown" data-wow-delay="0.8s" data-wow-offset="20"><center><img src="http://cache.bmwusa.com/image_b361b59a-95b3-41a6-a2f2-a43d2f12aa8c.arox?v=c0597b06-dd62-447a-a4fe-69bf52f73922" alt="BMW_TOP"></center></div>
+<div class="d7 wow rubberBand" data-wow-delay="2s" data-wow-offset="20"><h1 class="choosebmw">Вибери свою BMW!</h1></div>
+<div class="cars">
+<% @posts.each do |post| %>
+
+	<div class="carelem">
+	<p><%= image_tag(post.photo_url, :class => "carphoto")%></p>
+	<p class="carname"><b><%= post.category.name %></b></p>
+	<p><center><%= link_to post.name,  post_path(post.id), :class => "detali"%></center></p>
+	</div>
+<% end %>
+</div>
+
+
+<%= javascript_include_tag 'wow.min'%>
+<script>
+  	new WOW().init();
+</script>

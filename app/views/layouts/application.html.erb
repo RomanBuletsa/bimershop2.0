@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bimershop20</title>
-    <%= csrf_meta_tags %>
+	<title>Bimershop</title>
+	<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+  <div id="particles-js"></div>
+  <%= javascript_include_tag 'particles', 'app'%>
+  <div id="page-wrapper">
+  	<%= render 'layouts/header'%>
+	  <%= yield %>
+	  <%= render 'layouts/footer'%>
+  </div>
+
+
   </body>
 </html>

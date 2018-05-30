@@ -12,4 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require particles.js
+//= require bootstrap-sprockets
 //= require_tree .
+particlesJS.load('particles-js', '/app/assets/config.json');

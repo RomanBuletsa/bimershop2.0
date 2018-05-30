@@ -1,3 +1,56 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face{
+  font-family: "Aver"
+  src url('/assets/Aver_Bold_Italic')
+}
+
+body {background: #1D1B26}
+.button-container a {
+  text-decoration: none;
+  outline: none;
+  color: #A9A9A9;
+  display: inline-block;
+  position: relative;
+  padding: 30px 60px;
+  border: 1px solid;
+  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image-slice: 1;
+  margin: 2% 50px;   font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165,.84,.44,1);
+}
+
+.button-container a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: #FF4343;
+  background: linear-gradient(180deg, #ff6565, #ed0200, #ff096c, #d50082);
+  transition: .8s cubic-bezier(.165,.84,.44,1);
+}
+a:hover {background: rgba(255,255,255,0);}
+a:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+.description-site{
+  font-family: 'Aver';
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 50px;
+  color: white;
+  font-size: 28px;
+  line-height: 38px;
+  text-indent: 30px;
+}
