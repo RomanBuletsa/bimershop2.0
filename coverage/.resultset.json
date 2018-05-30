@@ -772,6 +772,13 @@
         null,
         null
       ],
+      "/home/thunder/bimershop2.0/spec/factories/category.rb": [
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/thunder/bimershop2.0/spec/factories/user.rb": [
         1,
         1,
@@ -1249,6 +1256,28 @@
         null,
         null
       ],
+      "/home/thunder/bimershop2.0/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
       "/home/thunder/bimershop2.0/spec/models/userparam_spec.rb": [
         1,
         null,
@@ -1369,6 +1398,6 @@
         null
       ]
     },
-    "timestamp": 1527717112
+    "timestamp": 1527717220
   }
 }
