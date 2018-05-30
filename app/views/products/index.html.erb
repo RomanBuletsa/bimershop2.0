@@ -1,17 +1,20 @@
-      <% @products.each do |product| %>
+<center><img src="https://www.autopartmax.com/images/cUpload/bmw.png"><center>
+  <h1 class="choosebmw">Немає грошей на нове авто? Вибирай б/у!</h1>
+<p class="description-site">Всі автомобілі, які розміщені нижче НЕ нові. Автосалон не несе відповідальності за їх технічний стан. </p>
+<div class="cars">
+<% @products.each do |product| %>
+<div class="carelem">
               <% if product.icons == [] %>
-              <%= image_tag("default-img.png", height: '200', width: '200') %>
-                	
+              <%= image_tag("default-img.png", height: '280', width: 'auto') %>
+
               <% else %>
-                  <!-- <%= image_tag(product.icons.first.url, height: '200', width: '200') %> -->
-                  <% product.icons.each do |photo| %>
-                  <%= image_tag(photo, height: '200', width: '200') %>
-                  <% end %>
+                  <%= image_tag(product.icons.first.url, class: 'carphoto') %>
               <% end %>
-            
-                  <a href="product.html"><%= product.name %></a>
-                
+                  <p><center><%=product.description%></center></p>
+                  <p><center><%= link_to product.name, product_path(product.id), class: 'detali'%></center></p>
+
                 <div class="product_price"><%= product.price %>$</div>
-              
-            
+
+</div>
       <% end %>
+</div>

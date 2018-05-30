@@ -123,8 +123,10 @@ margin-top: 2%;
 }
 .carphoto{
 text-align: center;
+position: relative;
 width: 100% !important;
 heigth: 100% !important;
+z-index: 2;
 }
 .showcar{
 width: 100%;
