@@ -798,6 +798,17 @@
         null,
         null
       ],
+      "/home/thunder/bimershop2.0/spec/factories/product.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/thunder/bimershop2.0/spec/factories/user.rb": [
         1,
         1,
@@ -1281,6 +1292,16 @@
         null,
         null
       ],
+      "/home/thunder/bimershop2.0/spec/models/image_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
       "/home/thunder/bimershop2.0/spec/models/post_spec.rb": [
         1,
         null,
@@ -1346,6 +1367,59 @@
         null,
         1,
         2,
+        2,
+        null,
+        null
+      ],
+      "/home/thunder/bimershop2.0/spec/models/product_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        9,
+        1,
+        8,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
         2,
         null,
         null
@@ -1492,6 +1566,6 @@
         null
       ]
     },
-    "timestamp": 1527717499
+    "timestamp": 1527717601
   }
 }
