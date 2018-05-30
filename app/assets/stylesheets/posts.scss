@@ -1,3 +1,184 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@font-face{
+  font-family: "Bizone";
+  src: url('/assets/Bizone');
+
+}
+body{
+background-image: url("http://www.designbolts.com/wp-content/uploads/2012/11/Dark-Geometric-Semi-Dark-Seamleass-Pattern-for-website-backgrounds.jpg ");
+background-repeat: repeat;
+}
+.choosebmw{
+  color: white;
+  font-family: "Bizone";
+}
+
+.item{
+  width: 100% !important;
+
+}
+.imagecars{
+  width: 1280px;
+  height: 720px;
+}
+#myCarousel{
+  width: 100% !important;
+}
+.carousel-inner{
+  width:100%;
+  max-height: 720px !important;
+}
+.container{
+	width: 1280 !important;
+	height: 720 !important;
+  margin-bottom: 300px;
+
+}
+h1 {
+font-size: 64px !important;
+letter-spacing: 1px;
+width: 100%;
+position: relative;
+display: inline-block;
+color: white;
+}
+.d7 h1 {
+text-align: center;
+padding-bottom: 10px;
+}
+.d7 h1:before {
+content: "";
+position: absolute;
+bottom: -2px;
+left: 50%;
+margin-left: -25%;
+width: 50%;
+height: 6px;
+background: #FFD700;
+}
+.d7 h1:after {
+content: "";
+position: absolute;
+bottom: -15px;
+left: 50%;
+margin-left: -15%;
+width: 30%;
+height: 6px;
+background: #FFD700;
+}
+.carelem{
+width:24%;
+display:inline-block;
+border:6px solid;
+border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+border-image-slice: 1;
+border-radius: 15px;
+margin-top: 5px;
+margin-bottom: 5px;
+background-image: url("http://silviahartmann.com/background-tile-art/images/grey-repeating-background-8.jpg");
+background-repeat: repeat;
+-webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+.carname {
+text-align: center;
+font-size: 14px;
+text-transform: uppercase;
+}
+.detali {
+display: inline-block;
+text-decoration: none !important;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin: 5px 10px;
+padding: 10px 15px;
+font-size: 14px;
+font-weight: bold;
+font-family: 'Montserrat', sans-serif;
+transition: 0.4s ease-in-out;
+color:  #3d0099 !important;
+border-radius: 50px;
+border: 3px solid  #3d0099;
+}
+.detali:hover {
+color: #F3E44F !important;
+background: #637A7C;
+}
+.carelem:hover{
+  border:6px solid white;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.cars {
+padding-left: 5%;
+padding-right: 2%;
+margin-top: 2%;
+}
+.carphoto{
+text-align: center;
+width: 100% !important;
+heigth: 100% !important;
+}
+.showcar{
+width: 100%;
+heigth: auto;
+}
+.showcarname{
+text-align: center;
+color: white;
+margin-top: 2%;
+margin-bottom: 2%;
+display: inline-block;
+}
+
+.showelem1{
+float: left;
+width: 50%;
+height: auto;
+}
+.showelem2{
+padding: 15px;
+font-size: 32px;
+float: right;
+width: 50%;
+height: auto;
+border:4px solid #778D8F;
+border-radius: 10px;
+min-height: 500px;
+}
+.cartext{
+margin-top: 5%;
+color: white;
+padding: 3%;
+font-size: 24px;
+}
+.elements{
+width: 100% !important;
+height: 500px !important;
+}
+.characteristics{
+color: white;
+padding-left: 3%;
+}
+.textarea{
+width: 60% !important;
+}
+textareadiv{
+width: 100%;
+padding-left: 20% !important;
+padding-right: 20% !important;
+}
+.showphotos{
+width: 100%;
+}
+.char{
+padding-bottom: 15px;
+color: white;
+}
