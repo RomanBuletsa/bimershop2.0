@@ -1,8 +1,12 @@
       <% @products.each do |product| %>
               <% if product.icons == [] %>
+              <%= image_tag("default-img.png", height: '200', width: '200') %>
                 	
               <% else %>
-                  <%= image_tag(product.icons.first.url, height: '200', width: '200') %>
+                  <!-- <%= image_tag(product.icons.first.url, height: '200', width: '200') %> -->
+                  <% product.icons.each do |photo| %>
+                  <%= image_tag(photo, height: '200', width: '200') %>
+                  <% end %>
               <% end %>
             
                   <a href="product.html"><%= product.name %></a>
