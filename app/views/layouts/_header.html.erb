@@ -30,7 +30,10 @@
         <% end %>
       </li>
       <li>
-        <%= link_to "Профіль",  userparams_path, class: "navbar-brand"%>
+        <%= link_to userparams_path, class: "navbar-brand" do%>
+          Профіль
+        <%end%>
+
       </li>
 			<li>
 				<%= link_to destroy_user_session_path, :class => "authin", method: :delete  do %>

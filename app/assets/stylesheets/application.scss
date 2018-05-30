@@ -71,6 +71,9 @@ table {
 border-collapse: collapse;
 border-spacing: 0;
 }
+.navbar-header{
+	width: auto !important;
+}
 .navbar-brand {
 		text-decoration: none !important;
 		text-transform: uppercase;
@@ -80,7 +83,23 @@ border-spacing: 0;
 		text-decoration: none !important;
 		text-transform: uppercase;
 }
-
+#particles-js{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+#page-wrapper{
+	position: relative;
+	min-height: 1800px;
+	z-index: 2;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
 .footer-top-layout {
 	background: #1c1c1c none repeat scroll 0 0;
 	color: #ffffff;

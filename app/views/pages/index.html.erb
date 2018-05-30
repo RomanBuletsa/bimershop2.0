@@ -1,30 +1,16 @@
-<% if current_user.nil? %>
-<li>
-<%= link_to user_session_path do %>
-<i class="zmdi zmdi-sign-in"></i> Login
-<% end %>
-</li>
-<% else %>
-<li>
-<%= link_to new_product_path do %>
-<i class="zmdi zmdi-plus"></i> <%= t('add_product') %>
-<% end %>
-</li>
-<li>
-<%= link_to userparams_path, data: {turbolinks: false}  do %>
-<i class="zmdi zmdi-user"></i> <%= t('profile') %>
-<% end %>
-</li>
-<li>
-<%= link_to destroy_user_session_path, method: :delete do %>
-<i class="zmdi zmdi-log-in"></i> <%= t('logout') %>
-<% end %>
-</li>
-<% end %>
+<%= stylesheet_link_tag 'animate' %>
 
-<center><div><a href="/posts/index">Каталог</a></div></center>
-<center><div><a href="/products/index">Каталог бу</a></div></center>
+<div class="wow flipInX" data-wow-offset="10"><img src="assets/back1.png" alt="BimerShop" width="100%"></div>
+<center><div class="button-container"><a href="/posts/index">Каталог</a></div></center>
+
+<div >
+  <p class="description-site">«Bimershop» - офіційний дилер відомого німецького виробника автомобілів - Bayerische Motoren Werke (BMW). У салоні «Bimershop» представлений весь модельний ряд автомобілів BMW, який дозволить вибрати автомобіль, відповідний найвищим вимогам комфорту і якості, що важливо при виборі автомобіля - за доступною ціною.
+
+  Наш сервісний центр забезпечить Вам швидку, кваліфіковану допомогу і підтримку. Для цього є все необхідне устаткування, яке відповідає вимогам обслуговування саме цих автомобілів. Для забезпечення швидкого обслуговування є власний склад запасних частин, на якому є достатній запас ресурсів.</p>
+</div>
 
 
-
-
+<%= javascript_include_tag 'wow.min'%>
+<script>
+  	new WOW().init();
+</script>
