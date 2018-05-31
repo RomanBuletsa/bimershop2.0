@@ -12,6 +12,6 @@ ActiveAdmin.register Post do
 #   permitted
 # end
 
-permit_params :category_id, :name, :text, :photo
+permit_params :category_id, :name, :text, :photo, :year, :count, :price, :ks, :privod, :kuzov
 
 end
