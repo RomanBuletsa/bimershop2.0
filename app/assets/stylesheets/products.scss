@@ -190,3 +190,27 @@ form .button {
 form .button:hover {
   opacity: 1;
 }
+form .button2 {
+  float: right;
+  height: 39px;
+  overflow: hidden;
+  margin-left: 20px;
+  padding: 0 20px;
+  outline: none;
+  border: 0;
+  width: 100% !important;
+  background-color: #009688;
+  font: 300 13px/39px 'Open Sans', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+}
+form .button2:hover {
+  opacity: 1;
+}
