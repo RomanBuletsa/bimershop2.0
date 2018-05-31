@@ -1,29 +1,48 @@
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="contact">
+  <div class="shapka">
+      <%= image_tag 'https://i2.wp.com/2mprogress.com/wp-content/uploads/2017/11/person-1824144_1280.png', alt: 'Icon', size: "120x120", class: "iconka" %>
   </div>
+  <form action="#">
+      <fieldset>
+          <section>
+            <label class="input">
+                <%= f.email_field :email, placeholder: "Електронна пошта", autofocus: true %>
+            </label>
+          </section>
+          <div class="row">
+              <section class="col col-2">
+                <label class="input">
+                    <%= f.password_field :password, placeholder: "Пароль" %>
+                </label>
+              </section>
+              <section class="col col-2">
+                  <label class="input">
+                      <%= f.password_field :password_confirmation, placeholder: "Підтвердження паролю" %>
+                  </label>
+              </section>
+              <section class="col col-2">
+                  <label class="input">
+                    <%= link_to "Log in", new_session_path(resource_name), class: 'form2but' %>
+                  </label>
+              </section>
+              <section class="col col-2">
+                  <label class="input">
+                      <%= f.submit "Sign up", class: 'button' %>
+                  </label>
+              </section
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+          </div>
+          <section>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+          </section>
+
+      </fieldset>
+  </form>
+</div>
+
+
 <% end %>
-
-<%= render "devise/shared/links" %>

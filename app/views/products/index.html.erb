@@ -11,7 +11,6 @@
               <% else %>
                   <%= image_tag(product.icons.first.url, class: 'carphoto') %>
               <% end %>
-                  <div class="descript"><center><%=product.description%></center></div>
                   <p><center><%= link_to product.name, product_path(product.id), class: 'detali'%></center></p>
 
                 <div class="product_price"><%= product.price %>$</div>
