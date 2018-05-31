@@ -29,7 +29,7 @@ end
 private
 
 def post_params
-params.require(:post).permit(:category_id, :name)
+params.require(:post).permit(:category_id, :name, :year, :count, :price, :ks, :privod, :kuzov)
 end
 
 def set_post
