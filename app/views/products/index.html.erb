@@ -3,6 +3,7 @@
 <p class="description-site">Всі автомобілі, які розміщені нижче НЕ нові. Автосалон не несе відповідальності за їх технічний стан. </p>
 <div class="cars">
 <% @products.each do |product| %>
+<%= link_to product_path(product.id) do %>
 <div class="carelem">
               <% if product.icons == [] %>
               <%= image_tag("default-img.png", height: '280', width: 'auto') %>
@@ -10,11 +11,12 @@
               <% else %>
                   <%= image_tag(product.icons.first.url, class: 'carphoto') %>
               <% end %>
-                  <p><center><%=product.description%></center></p>
+                  <div class="descript"><center><%=product.description%></center></div>
                   <p><center><%= link_to product.name, product_path(product.id), class: 'detali'%></center></p>
 
                 <div class="product_price"><%= product.price %>$</div>
 
 </div>
+      <% end %>
       <% end %>
 </div>
