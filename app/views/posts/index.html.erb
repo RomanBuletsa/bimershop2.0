@@ -5,12 +5,12 @@
 <div class="d7 wow rubberBand" data-wow-delay="2s" data-wow-offset="20"><h1 class="choosebmw">Вибери свою BMW!</h1></div>
 <div class="cars">
 <% @posts.each do |post| %>
-
+<%= link_to post_path(post.id) do %>
 	<div class="carelem">
 	<p><%= image_tag(post.photo_url, :class => "carphoto")%></p>
-	<p class="carname"><b><%= post.category.name %></b></p>
 	<p><center><%= link_to post.name,  post_path(post.id), :class => "detali"%></center></p>
 	</div>
+<% end %>
 <% end %>
 </div>
 

@@ -5,13 +5,15 @@
 <div class="showelem1"><%= image_tag(@post.photo, :class => "showcar") %></div>
 <div class="showelem2 wow fadeInRight" data-wow-delay="0.6s" data-wow-offset="20">
 <h2 class="char"><center>Характеристики:</center></h2>
-<p align="center"> В розробці </p>
+
 
 
 </div>
 </div>
 <h4 class="cartext"><%= @post.text %></h4>
+<% if @images == [] %>
 
+<% else %>
 <div class="container">
 
 
@@ -49,7 +51,7 @@
   </div>
 </div>
 
-
+<% end %>
 
 
 

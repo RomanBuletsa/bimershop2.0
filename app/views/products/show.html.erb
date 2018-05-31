@@ -1,0 +1,69 @@
+<div class="container">
+
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+   <% @product.icons.each_with_index do |photo, n| %>
+     <li data-target='#MyCarousel' data-slide-to="#{n}" class="#{'active' if n == 0}"></li>
+   <% end %>
+</ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <p><%= image_tag(@product.icons.first.url, :class => "imagecars") %></p>
+      </div>
+
+
+      <% @product.icons.drop(1).each do |image| %>
+      <div class="item">
+        <p><%= image_tag(image, :class => "imagecars1") %></p>
+      </div>
+      <hr>
+      <% end %>
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      </div>
+  </div>
+</div>
+<div class="contact12">
+
+    <form action="#">
+        <fieldset>
+            <div class="row">
+                <section class="col col-2">
+                    <label class="input">
+                        <p> Марка та модель авто</p>
+                        <%= @product.name %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <p>Рік випуску</p>
+                        <%= @product.count %>
+                    </label>
+                </section>
+                <section class="col col-2">
+                    <label class="input">
+                        <p> Ціна</p>
+                        <%= @product.price %>
+                    </label>
+                </section>
+            </div>
+            <section>
+                <label class="textarea">
+                    <p>Опис автомобіля</p>
+                    <%= @product.description%>
+                </label>
+            </section>
+        </fieldset>
+    </form>
+</div>

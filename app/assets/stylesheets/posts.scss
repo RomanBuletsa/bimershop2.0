@@ -35,9 +35,9 @@ background-repeat: repeat;
 .container{
 	width: 1280 !important;
 	height: 720 !important;
-  margin-bottom: 300px;
-
+  margin-bottom: 250px;
 }
+
 h1 {
 font-size: 64px !important;
 letter-spacing: 1px;
@@ -123,8 +123,10 @@ margin-top: 2%;
 }
 .carphoto{
 text-align: center;
+position: relative;
 width: 100% !important;
 heigth: 100% !important;
+z-index: 2;
 }
 .showcar{
 width: 100%;
